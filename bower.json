@@ -1,0 +1,25 @@
+{
+  "name": "Portzar",
+  "version": "0.0.2",
+  "dependencies": {
+    "backbone": "*",
+    "bootstrap": "*",
+    "jade":"*",
+    "jquery": "~2.0.3",
+    "requirejs": "*",
+    "underscore-amd": "*"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "tests",
+    "vendor"
+  ],
+  "devDependencies": {
+    "sinon": "~1.7.3",
+    "jasmine-sinon": "~0.1.0",
+    "spin": "~1.1.1",
+    "spin.js": "~1.3.2"
+  }
+}

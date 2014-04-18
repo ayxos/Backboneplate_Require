@@ -1,0 +1,36 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": ">=0.10.26"
+  },
+  "dependencies": {
+    "bower": "*",
+    "express": "3.4.8",
+    "grunt": "~0.4.2",
+    "jade": "*",
+    "requirejs":"*",
+    "stylus": "*",
+    "mongoose": "*"
+  },
+  "devDependencies": {
+    "grunt-bower-task":"*",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-jasmine": "~0.5.2",
+    "grunt-contrib-jshint": "~0.6.2",
+    "grunt-contrib-requirejs":"~0.4.1",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-watch": "0.5.1",
+    "grunt-jade":"*",
+    "grunt-newer":"~0.5.4",
+    "grunt-processhtml":"*",
+    "rjs-build-analysis":"*"
+  }
+}
