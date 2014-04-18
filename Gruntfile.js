@@ -45,6 +45,21 @@ module.exports = function(grunt) {
           runtime: false
         }
       },
+      common: {
+        files: {
+          'public/js/common/modal/templates/tpl/': 'public/js/common/modal/templates/**/*.jade'
+        },
+        options: {
+          basePath: 'public/js/common/modal/templates',
+          wrap: {
+            wrap: true,
+            amd: true,
+            node: false,
+            dependencies: 'jade'
+          },
+          runtime: false
+        }
+      }
     },
 
     jshint: {
