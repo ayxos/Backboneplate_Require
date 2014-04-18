@@ -22,7 +22,7 @@ requirejs.config({
   }
 });
 
-require(['backbone', 'js/backbone/router'], function(Backbone, AppRouter) {
+require(['backbone', 'js/apps/router'], function(Backbone, AppRouter) {
   //ES IMPRESCINDIBLE BACKBONE HISTORY START
   Backbone.View.prototype.close = function () {
     console.log('Closing view ' + this);

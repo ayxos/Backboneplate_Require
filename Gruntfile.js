@@ -17,7 +17,7 @@ module.exports = function(grunt) {
       }
     },
 
-    clean: ['public/css/*.min.css', 'public/js/backbone/templates/tpl/'],
+    clean: ['public/css/*.min.css', 'public/js/apps/home/templates/tpl/'],
 
     copy: {
       main: {
@@ -32,10 +32,10 @@ module.exports = function(grunt) {
     jade: {
       apps: {
         files: {
-          'public/js/backbone/templates/tpl/': 'public/js/backbone/templates/**/*.jade'
+          'public/js/apps/home/templates/tpl/': 'public/js/apps/home/templates/**/*.jade'
         },
         options: {
-          basePath: 'public/js/backbone/templates',
+          basePath: 'public/js/apps/home/templates',
           wrap: {
             wrap: true,
             amd: true,
@@ -80,7 +80,7 @@ module.exports = function(grunt) {
           Mustache:true,
           Rectangulo:true,
         },
-        ignores: ['public/js/require.js', 'public/js/backbone/templates/tpl/*.js']
+        ignores: ['public/js/require.js', 'public/js/apps/home/templates/tpl/*.js']
       },
     },
 
@@ -124,12 +124,12 @@ module.exports = function(grunt) {
         event: ['added', 'changed']
       },
       jade: {
-        files: ['public/js/backbone/templates/*.jade'],
+        files: ['public/js/apps/home/templates/*.jade'],
         tasks: ['newer:jade','jade']
       },
       backbone: {
-        files: ['public/js/backbone/**/*.js'],
-        tasks: ['jshint','concat:backbone','uglify:backbonemin']
+        files: ['public/js/apps/home/**/*.js'],
+        tasks: ['jshint']
       }
     }
 
@@ -168,7 +168,7 @@ module.exports = function(grunt) {
   // production task
   grunt.registerTask('production', ['bower', 'clean:pre', 'sass', 'cssmin', 'copy', 'jade', 'processhtml:prod', 'requirejs']);
   // default task
-  grunt.registerTask('default', ['bower', 'clean', 'jshint', 'copy', 'jade']);
+  grunt.registerTask('default', ['bower', 'clean', 'jshint', 'jade']);
   // untest task
   grunt.registerTask('notest', ['clean','jade', 'concat']);
   // test task
