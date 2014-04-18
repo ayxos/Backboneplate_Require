@@ -1,20 +1,21 @@
 define(function(require) {
   'use strict';
 
-  var Backbone = require('backbone');
+  var Backbone = require('backbone')
+  , rowTpl = require('js/backbone/templates/tpl/row')
+  ;
 
   return Backbone.View.extend({
 
     tagName:"tr",
 
     events: {
-      'click #dele': 'delete'
+      'click [data-action="delete"]': 'delete'
     },
 
     initialize:function () {
       console.log('peopleRowView');
-      // this.template = _.template(tpl.get('people-list-item'));
-      this.template = _.template("<td> <%= name %> </td> <td> <%= surname %> </td> <td> <%= age %> </td> <td> <%= _id %> <td> <input id='dele' type='submit' value='X'> </td>");
+      this.template = rowTpl;
       this.model.bind("change", this.render, this);
       this.model.bind("destroy", this.close, this);
     },

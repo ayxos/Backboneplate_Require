@@ -4,7 +4,7 @@ attrs = attrs || jade.attrs; escape = escape || jade.escape; rethrow = rethrow |
 var buf = [];
 with (locals || {}) {
 var interp;
-buf.push('<button type="button" data-action="openModal" class="btn btn-default">Modal</button>Backbone BBDD form<div class="persona"><input id="name" placeholder="Name"/><input id="surname" placeholder="Surname"/><input id="age" placeholder="age"/><button type="button" data-action="new" class="btn btn-default">Back</button></div>rutas BB<table id="bbdd"></table><button type="button" data-action="home" class="btn btn-default">Back</button>');
+buf.push('<button type="button" data-action="openModal" class="btn btn-default">Modal</button><p>Backbone BBDD form</p><div class="persona"><input id="name" placeholder="Name"/><input id="surname" placeholder="Surname"/><input id="age" placeholder="age"/><button type="button" data-action="new" class="btn btn-default">New</button></div><p>rutas BB</p><table id="bbdd"></table><button type="button" data-action="home" class="btn btn-default">Back</button>');
 }
 return buf.join("");
 };
