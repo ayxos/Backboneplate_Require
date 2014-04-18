@@ -113,26 +113,17 @@ module.exports = function(grunt) {
     },
 
     requirejs: {
+
       app: {
         options: {
-          // dir where r.js is located
-          baseUrl: 'public/js',
-          // optimizeCss: 'application.css',
-          // name of the output minified and optimizied code
-          name: "main",
-          out: "public/js/main-built.js",
-          generateSourceMaps: true,
-          preserveLicenseComments: false,
-          inlineText: true,
-          findNestedDependencies: true,
+          name:'js/main',
+          baseUrl: "./public/",
           mainConfigFile: "public/js/main.js",
-          skipModuleInsertion: false
-          //If set to true, any files that were combined into a build bundle will be
-          //removed from the output folder.
+          out: "public/js/main-built.js"
         }
       }
-    },
 
+    },
 
     watch: {
       options: {

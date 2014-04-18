@@ -1,13 +1,13 @@
 requirejs.config({
   waitSeconds: 0,
 
-  baseUrl: '/',
+  baseUrl: './',
 
   paths: {
-    jade                         : '../vendors/jade/runtime',
-    jquery                       : '../vendors/jquery/jquery',
-    underscore                   : '../vendors/underscore/underscore',
-    backbone                     : '../vendors/backbone/backbone'
+    jade                         : 'vendors/jade/runtime',
+    jquery                       : 'vendors/jquery/jquery',
+    underscore                   : 'vendors/underscore/underscore',
+    backbone                     : 'vendors/backbone/backbone'
 
   },
 
